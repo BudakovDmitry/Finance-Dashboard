@@ -1,0 +1,48 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header--title {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 40px;
+  letter-spacing: 2px;
+  color: #404040;
+}
+
+.header--description {
+  margin: 0;
+  color: #AEAEAE;
+  font-size: 14px;
+}
+
+.header--title--container {
+  margin-right: auto;
+}
+
+.header--account--container {
+  display: flex;
+  width: 230px;
+  height: 30px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header--account--container img {
+  width: 25px;
+  display: inline-block;
+}
+
+
+.header--account--text {
+  margin: 0;
+  font-size: 12px;
+  color: #AEAEAE;
+}
+
+.header--account--text span {
+  color: #000000;
+  font-weight: bold;
+}
