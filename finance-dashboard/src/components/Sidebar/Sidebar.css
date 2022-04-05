@@ -46,3 +46,23 @@
   margin-right: 20px;
   color: #197BBD;
 }
+
+.sidebar--promo {
+  margin: 0 auto;
+}
+
+.sidebar--promo img {
+  display: block;
+  width: 60px;
+  margin: 0 auto;
+  margin-top: 90px;
+}
+
+.sidebar--promo p {
+  font-size: 8px;
+  width: 90px;
+  text-align: center;
+  line-height: 12px;
+  margin: 0 auto;
+  margin-top: 10px;
+}

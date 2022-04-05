@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Logo from "../../images/Logo.png";
+import Promo from "../../images/Promo.png";
 import "./Sidebar.css";
 
 import SidebarItem from "../SidebarItem/SidebarItem";
@@ -25,6 +26,10 @@ export default function Sidebar() {
         Cloudcash
       </a>
       <ul className="sidebar--nav">{navItem}</ul>
+      <div className="sidebar--promo">
+        <img src={Promo} alt="Promo" />
+        <p>Give your money awesome space in cloud</p>
+      </div>
     </nav>
   );
 }

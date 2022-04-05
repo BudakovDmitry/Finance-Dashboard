@@ -19,7 +19,7 @@ export default function StatisticsItem({
           variant="determinate"
           value={percentage}
           sx={{
-            width: 350,
+            width: 380,
             height: 8,
             borderRadius: 10,
             marginTop: 3.5,
