@@ -9,6 +9,10 @@ import Mountain from "../../images/icon/Mountain-icon.png";
 import Brash from "../../images/icon/Brash-icon.png";
 import Joystick from "../../images/icon/Joystick-icon.png";
 
+import Car from "../../images/icon/Car-icon.png";
+import Plane from "../../images/icon/Plane-icon.png";
+import Cart from "../../images/icon/Cart-icon.png";
+
 export {
   Overview,
   Transactions,
@@ -19,4 +23,7 @@ export {
   Mountain,
   Brash,
   Joystick,
+  Car,
+  Plane,
+  Cart,
 };

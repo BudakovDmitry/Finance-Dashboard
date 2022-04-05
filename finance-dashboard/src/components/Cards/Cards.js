@@ -13,7 +13,7 @@ export default function Cards() {
           value={20}
           sx={{
             width: 220,
-            height: 6,
+            height: 8,
             marginBottom: 1,
             borderRadius: 10,
           }}
