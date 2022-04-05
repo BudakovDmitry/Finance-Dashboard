@@ -1,4 +1,5 @@
 import Card from "../../images/Card.png";
+import { Switch, LinearProgress } from "@mui/material";
 import "./Cards.css";
 
 export default function Cards() {
@@ -7,6 +8,16 @@ export default function Cards() {
       <div className="card">
         <h3 className="card--title">Cards</h3>
         <img src={Card} alt="Card" />
+        <LinearProgress
+          variant="determinate"
+          value={20}
+          sx={{
+            width: 220,
+            height: 6,
+            marginBottom: 1,
+            borderRadius: 10,
+          }}
+        />
         <div className="card--limit">
           <p>Weekly payment limit</p>
           <p className="card--limit--balance">
@@ -27,7 +38,10 @@ export default function Cards() {
           <p>$ 350.60</p>
           <p>Outcome</p>
         </div>
-        <p className="card--info--deactivate">Deacivate card</p>
+        <div className="card--info--item">
+          <Switch />
+          <p className="card--info--deactivate">Deacivate card</p>
+        </div>
       </div>
     </div>
   );
