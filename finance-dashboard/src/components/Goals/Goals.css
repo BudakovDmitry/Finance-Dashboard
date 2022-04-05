@@ -1,0 +1,35 @@
+.goals {
+  position: absolute;
+  right: -20px;
+}
+
+.goals--title--container {
+  display: flex;
+  align-items: center;
+}
+
+.goals--title {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.goals--title--button {
+  padding: 0;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: #FFC145;
+}
+
+.goals--title--button:hover {
+  border: 1px solid #FFC145;
+  background-color: #ffffff;
+}
+
+.goals--items {
+  display: flex;
+}
