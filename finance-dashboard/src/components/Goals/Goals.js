@@ -6,11 +6,18 @@ export default function Goals() {
   const [goal, setGoal] = useState([
     { name: "Holidays", date: "12/20/20", amount: 500, img: "Mountain" },
     { name: "Renovation", date: "12/20/20", amount: 200, img: "Brash" },
-    { name: "Xbox", date: "12/20/20", amount: 820, img: "Joystick" },
+    { name: "PlayStation 5", date: "12/20/20", amount: 820, img: "Joystick" },
   ]);
 
   const goalsItem = goal.map((item) => {
-    return <GoalsItem name={item.name} amount={item.amount} date={item.date} img={item.img} />;
+    return (
+      <GoalsItem
+        name={item.name}
+        amount={item.amount}
+        date={item.date}
+        img={item.img}
+      />
+    );
   });
 
   return (
@@ -20,6 +27,7 @@ export default function Goals() {
         <button className="goals--title--button">+</button>
       </div>
       <div className="goals--items">{goalsItem}</div>
+      <button className="goals--button--right">&#8250;</button>
     </div>
   );
 }

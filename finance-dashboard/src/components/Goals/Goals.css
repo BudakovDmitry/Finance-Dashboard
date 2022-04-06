@@ -1,11 +1,12 @@
 .goals {
   position: absolute;
-  right: -20px;
+  right: 20px;
 }
 
 .goals--title--container {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .goals--title {
@@ -32,4 +33,20 @@
 
 .goals--items {
   display: flex;
+}
+
+.goals--button--right {
+  position: absolute;
+  top: 110px;
+  right: -10px;
+  width: 10px;
+  height: 20px;
+  border: none;
+  font-size: 40px;
+  background-color: rgba(0,0,0,0.0);
+  color: #197BBD;
+}
+
+.goals--button--right:hover {
+  font-weight: bold;
 }

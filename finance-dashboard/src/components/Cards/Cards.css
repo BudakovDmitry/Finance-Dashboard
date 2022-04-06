@@ -11,6 +11,39 @@
 .card {
   padding: 20px;
   padding-right: 0;
+  position: relative;
+}
+
+.card--button--left {
+  position: absolute;
+  top: 110px;
+  left: 5px;
+  width: 10px;
+  height: 20px;
+  border: none;
+  font-size: 40px;
+  background-color: rgba(0,0,0,0.0);
+  color: #197BBD;
+}
+
+.card--button--right {
+  position: absolute;
+  top: 110px;
+  left: 250px;
+  width: 10px;
+  height: 20px;
+  border: none;
+  font-size: 40px;
+  background-color: rgba(0,0,0,0.0);
+  color: #197BBD;
+}
+
+.card--button--left:hover {
+  font-weight: bold;
+}
+
+.card--button--right:hover {
+  font-weight: bold;
 }
 
 .card--title {
@@ -26,6 +59,7 @@
 
 .card--limit {
   display: flex;
+  padding-left: 10px;
   width: 220px;
   justify-content: space-between;
 }
@@ -41,7 +75,7 @@
 }
 
 .card--info {
-  padding: 30px 20px;
+  padding: 30px 20px 0 0;
 }
 
 .card--info--item {

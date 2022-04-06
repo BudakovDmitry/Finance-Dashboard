@@ -1,18 +1,18 @@
 .transaction {
   width: 45%;
-  height: 220px;
+  height: 266px;
   border-radius: 30px;
   box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.1);
 }
 
 .transaction--title {
-  padding: 10px 0 0 20px;
+  padding: 20px 0 0 20px;
   font-size: 16px;
   margin: 0;
 }
 
 .transaction--table {
-  padding: 10px 20px;
+  padding: 20px 20px;
 }
 
 .transaction--table table {
@@ -26,7 +26,7 @@
   color: #AEAEAE;
   text-align: start;
   border: none;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   font-weight: 400;
 }
 
@@ -39,7 +39,7 @@
   font-size: 12px;
   text-align: start;
   word-spacing: 2px;
-  padding-bottom: 5px;
+  padding-bottom: 8px;
 }
 
 .transaction--table td:nth-child(4) {

@@ -4,7 +4,7 @@ import Badge from "@mui/material/Badge";
 import MailIcon from "@mui/icons-material/Mail";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 
-export default function Header() {
+export default function Header({ mail }) {
   return (
     <header className="header">
       <div className="header--title--container">
@@ -14,7 +14,7 @@ export default function Header() {
         </p>
       </div>
       <div className="header--account--container">
-        <Badge badgeContent={1} color="error">
+        <Badge badgeContent={mail.length} color="error">
           <MailIcon color="disabled" />
         </Badge>
         <Badge color="error" variant="dot" overlap="circular">

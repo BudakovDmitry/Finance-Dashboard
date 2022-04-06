@@ -1,13 +1,17 @@
-import Card from "../../images/Card.png";
 import { Switch, LinearProgress } from "@mui/material";
+import Right from "../../images/icon/Right-icon.png";
+import Left from "../../images/icon/Left-icon.png";
 import "./Cards.css";
+import Card from "../Card/Card";
 
 export default function Cards() {
   return (
     <div className="cards">
       <div className="card">
         <h3 className="card--title">Cards</h3>
-        <img src={Card} alt="Card" />
+        <button className="card--button--left">&#8249;</button>
+        <Card />
+        <button className="card--button--right">&#8250;</button>
         <LinearProgress
           variant="determinate"
           value={20}
@@ -15,6 +19,7 @@ export default function Cards() {
             width: 220,
             height: 8,
             marginBottom: 1,
+            marginLeft: 1.5,
             borderRadius: 10,
           }}
         />

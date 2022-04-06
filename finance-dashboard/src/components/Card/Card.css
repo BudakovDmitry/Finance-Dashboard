@@ -1,0 +1,64 @@
+.card--item {
+  padding: 10px 10px;
+  position: relative;
+}
+
+.card--item--title {
+  position: absolute;
+  top: 10px;
+  left: 30px;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.card--item--account {
+  position: absolute;
+  top: 35px;
+  left: 30px;
+  font-size: 6px;
+  color: #FFFFFF63;
+}
+
+.card--item--holder {
+  color: #ffffff;
+  font-size: 4px;
+  position: absolute;
+  top: 115px;
+  left: 30px;
+}
+
+.card--item--date {
+  color: #ffffff;
+  font-size: 4px;
+  position: absolute;
+  top: 115px;
+  left: 100px;
+}
+
+.card--item--name {
+  color: #ffffff;
+  font-size: 8px;
+  position: absolute;
+  top: 120px;
+  left: 30px;
+  font-weight: bold;
+}
+
+.card--item--expire--date {
+  color: #ffffff;
+  font-size: 8px;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  font-weight: bold;
+}
+
+.card--item--number {
+  font-size: 16px;
+  color: #ffffff;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  word-spacing: 5px;
+  letter-spacing: 1.5px;
+}
