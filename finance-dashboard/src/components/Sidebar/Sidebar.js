@@ -23,7 +23,7 @@ export default function Sidebar() {
 
   return (
     <nav className="sidebar">
-      <Link to="/Overview" className="sidebar--logo">
+      <Link to="/" className="sidebar--logo">
         <img src={Logo} alt="Logo" className="sidebar--logo--image" />
         Cloudcash
       </Link>

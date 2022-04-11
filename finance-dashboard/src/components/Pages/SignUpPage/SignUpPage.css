@@ -1,0 +1,64 @@
+.signup {
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+}
+
+.signup--container {
+  width: 300px;
+  height: 570px;
+  margin: 0 auto;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow:
+   0 1px 4px rgba(0, 0, 0, .0),
+   -23px 0 20px -23px rgba(0, 0, 0, .2),
+   23px 0 20px -23px rgba(0, 0, 0, .2),
+   0 0 40px rgba(0, 0, 0, .0) inset;
+  position: relative;
+}
+
+.signup--title {
+  font-family: 'Lato';
+  font-size: 40px;
+  padding-top: 30px;
+  margin-bottom: 40px;
+  color: #197BBD;
+}
+
+.signup--input {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  width: 250px;
+  height: 40px;
+  border: 1px solid rgba(147, 146, 146, 0.538);
+  border-radius: 3px;
+  padding-left: 10px;
+}
+
+.signup--button {
+  margin-top: 20px;
+  width: 262px;
+  height: 30px;
+  font-family: 'Lato';
+  background-color: #ffffff;
+  border: 1px solid rgba(147, 146, 146, 0.538);
+  color: #197BBD;
+}
+
+.signup--button:hover {
+  background-color: #F0F7FF;
+  border: 1px solid #197BBD;
+  font-weight: bold;
+}
+
+.signup--login--link {
+  display: block;
+  text-decoration: none;
+  font-size: 10px;
+  color: #197BBD;
+  position: absolute;
+  bottom: 30px;
+  left: 136px;
+}
