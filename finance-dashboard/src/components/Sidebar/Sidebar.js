@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import { useState } from "react";
 import Logo from "../../images/Logo.png";
 import Promo from "../../images/Promo.png";
@@ -21,10 +23,10 @@ export default function Sidebar() {
 
   return (
     <nav className="sidebar">
-      <a href="#" className="sidebar--logo">
+      <Link to="/Overview" className="sidebar--logo">
         <img src={Logo} alt="Logo" className="sidebar--logo--image" />
         Cloudcash
-      </a>
+      </Link>
       <ul className="sidebar--nav">{navItem}</ul>
       <div className="sidebar--promo">
         <img src={Promo} alt="Promo" />

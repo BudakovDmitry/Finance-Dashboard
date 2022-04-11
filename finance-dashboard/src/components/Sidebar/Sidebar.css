@@ -24,20 +24,26 @@
   padding-left: 10px;
 }
 
+li {
+  list-style-type: none; 
+}
+
 .sidebar--nav--item {
   display: flex;
+  text-decoration: none;
   align-items: center;
-  list-style-type: none; 
   font-size: 14px;
   font-weight: bold;
   color: #C7C7C7;
+  height: 20px;
   padding: 10px 20px;
   margin-bottom: 10px;
 }
 
-.sidebar--nav--item:hover {
+.sidebar--nav--item--active {
   color: #197BBD;
   background-color: #F0F7FF;
+  padding: 10px 20px;
   border-radius: 5px;
 }
 
