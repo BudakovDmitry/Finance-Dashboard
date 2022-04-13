@@ -4,7 +4,7 @@ import {
   Switch,
   Redirect,
 } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 import Sidebar from "../Sidebar/Sidebar";
@@ -18,12 +18,14 @@ import LoginPage from "../Pages/LoginPage/LoginPage";
 import SignUpPage from "../Pages/SignUpPage/SignUpPage";
 
 function App() {
-  const [login, setLogin] = useState(false);
+  const [login, setLogin] = useState(true);
+
+  let navigation = login ? <Sidebar /> : null;
 
   return (
     <Router>
       <div className="app">
-        <Sidebar />
+        {navigation}
         <Switch>
           <Route exact path="/Overview">
             <OverviewPage />
