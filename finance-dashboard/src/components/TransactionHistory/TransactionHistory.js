@@ -51,7 +51,7 @@ export default function TransactionHistory() {
   return (
     <div className="transaction">
       <h3 className="transaction--title">Transaction history</h3>
-      <div class="transaction--table">
+      <div className="transaction--table">
         <table>
           <tbody>
             <tr>

@@ -17,7 +17,11 @@ export default function OverviewPage() {
 
   return (
     <div className="overview">
-      <Header mail={mail} />
+      <Header
+        title="Weekly sumup"
+        description="Get summary of your weekly online transactions here."
+        mail={mail}
+      />
       <div className="overview--item">
         <Cards />
         <TransactionHistory />
