@@ -6,5 +6,57 @@
 
 .page--transaction--container {
   margin: 0 auto;
-  width: 2100px;
+}
+
+.transaction--page--table {
+  padding: 20px 60px;
+  height: 500px;
+  overflow-y: scroll;
+}
+
+.transaction--page--table table {
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transaction--page--table th {
+  font-size: 14px;
+  color: #AEAEAE;
+  font-weight: bold;
+  text-align: start;
+  border: none;
+  padding-bottom: 25px;
+  font-weight: 400;
+}
+
+.transaction--page--table th:nth-child(4) {
+  text-align: end;
+}
+
+.transaction--page--table tr {
+  margin-bottom: 10px;
+}
+
+.transaction--page--table td {
+  padding: 5px;
+  font-size: 12px;
+  text-align: start;
+  word-spacing: 2px;
+  padding-bottom: 8px;
+}
+
+.transaction--page--table td:nth-child(4) {
+  font-size: 12px;
+  text-align: end;
+  font-weight: bold;
+}
+
+.transaction--page--table td:nth-child(2), .transaction--page--table td:nth-child(3) {
+  color: #AEAEAE;
+}
+
+.transaction--page--table tr > td {
+  border-bottom: 1px solid #aeaeae2d;
+  margin-bottom: 10px;
 }

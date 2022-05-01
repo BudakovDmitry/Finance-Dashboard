@@ -1,19 +1,19 @@
 import { Formik } from "formik";
-import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import * as Yup from "yup";
 
-import { goalCreated, goalDeleted } from "../../../actions/actions";
+import { goalCreated } from "../../../actions/actions";
 import "./GoalsPage.css";
 import Header from "../../Header/Header";
 import GoalsPageItem from "../../GoalsPageItem/GoalsPageItem";
+import { nanoid } from "nanoid";
 
 export default function GoalsPage() {
     const { goals } = useSelector((state) => state);
     const dispatch = useDispatch();
-    const [goal, setGoal] = useState([]);
 
     const initialValue = {
+        id: "",
         type: "",
         title: "",
         date: "",
@@ -30,20 +30,26 @@ export default function GoalsPage() {
             .min(2, "To short!")
             .max(30, "To long!")
             .required("Required"),
-        amount: Yup.number().required("Required"),
+        amount: Yup.number().positive().required("Required"),
     });
 
-    const updateGoal = (newItem) => {
-        setGoal((prevItem) => [...prevItem, newItem]);
+    const addGoal = (value) => {
+        const newItem = {
+            ...value,
+            id: nanoid(),
+        };
+        dispatch(goalCreated(newItem));
     };
 
     const goalItem = goals.map((item) => {
         return (
             <GoalsPageItem
+                key={item.id}
                 type={item.type}
                 title={item.title}
                 date={item.date}
                 amount={item.amount}
+                id={item.id}
             />
         );
     });
@@ -61,7 +67,7 @@ export default function GoalsPage() {
                     <Formik
                         initialValues={initialValue}
                         validationSchema={goalSchema}
-                        onSubmit={(values) => updateGoal(values)}
+                        onSubmit={(values) => addGoal(values)}
                     >
                         {({
                             values,
@@ -149,7 +155,15 @@ export default function GoalsPage() {
                         )}
                     </Formik>
                 </div>
-                <div className="goals--item--container">{goalItem}</div>
+                <div className="goals--item--container">
+                    {goals.length > 0 ? (
+                        goalItem
+                    ) : (
+                        <h3 className="no--goals--item">
+                            No goals, please add first goal.
+                        </h3>
+                    )}
+                </div>
             </div>
         </div>
     );

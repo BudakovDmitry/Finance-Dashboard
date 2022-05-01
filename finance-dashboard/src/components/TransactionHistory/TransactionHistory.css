@@ -3,6 +3,7 @@
   height: 266px;
   border-radius: 30px;
   box-shadow: 0px 5px 5px 1px rgba(0,0,0,0.1);
+  overflow-y: hidden;
 }
 
 .transaction--title {

@@ -123,6 +123,13 @@
   opacity: .6;
 }
 
+.no--goals--item {
+  align-items: center;
+  padding-top: 100px;
+  text-transform: uppercase;
+  word-spacing: 2px;
+}
+
 .error--input {
   margin: 0;
   padding: 0;
@@ -131,4 +138,36 @@
   position: absolute;
   left: 362px;
   text-align: start;
+}
+
+/* Button */
+
+.goals--item--button {
+  display: flex;
+  flex-direction: column;
+}
+
+.button--delete {
+  display: block;
+  width: 30px;
+  height: 15px;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+  background-color: #fff;
+  color: red;
+  border: none;
+}
+
+.button--done {
+  display: block;
+  width: 30px;
+  height: 15px;
+  text-align: center;
+  font-weight: bold;
+  align-items: center;
+  background-color: #fff;
+  color: green;
+  border: none;
+  margin-bottom: 5px;
 }
