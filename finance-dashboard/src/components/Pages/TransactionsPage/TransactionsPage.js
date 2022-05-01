@@ -20,19 +20,23 @@ export default function TransactionsPage() {
         <div className="page--transaction">
             <h2 className="page--transaction--title">Transactions</h2>
             <div className="page--transaction--container">
-                <div className="transaction--page--table">
-                    <table>
-                        <tbody>
-                            <tr>
-                                <th>Reciever</th>
-                                <th>Type</th>
-                                <th>Date</th>
-                                <th>Amount</th>
-                            </tr>
-                            {transactionItem}
-                        </tbody>
-                    </table>
-                </div>
+                {transactions.length > 0 ? (
+                    <div className="transaction--page--table">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Reciever</th>
+                                    <th>Type</th>
+                                    <th>Date</th>
+                                    <th>Amount</th>
+                                </tr>
+                                {transactionItem}
+                            </tbody>
+                        </table>
+                    </div>
+                ) : (
+                    <h2 className="transaction--page--no--transactions">No transactions...</h2>
+                )}
             </div>
         </div>
     );

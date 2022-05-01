@@ -20,19 +20,23 @@ export default function TransactionHistory() {
     return (
         <div className="transaction">
             <h3 className="transaction--title">Transaction history</h3>
-            <div className="transaction--table">
-                <table>
-                    <tbody>
-                        <tr>
-                            <th>Reciever</th>
-                            <th>Type</th>
-                            <th>Date</th>
-                            <th>Amount</th>
-                        </tr>
-                        {transactionItem}
-                    </tbody>
-                </table>
-            </div>
+            {transactions.length > 0 ? (
+                <div className="transaction--table">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>Reciever</th>
+                                <th>Type</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                            </tr>
+                            {transactionItem}
+                        </tbody>
+                    </table>
+                </div>
+            ) : (
+                <h2 className="no--transactions">No transactions...</h2>
+            )}
         </div>
     );
 }

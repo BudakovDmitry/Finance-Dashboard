@@ -11,3 +11,10 @@ export const goalDeleted = (id) => {
         payload: id,
     };
 };
+
+export const transactionCreated = (transaction) => {
+    return {
+        type: "TRANSACTION_CREATED",
+        payload: transaction,
+    };
+};

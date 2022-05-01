@@ -56,3 +56,10 @@
 .transaction--table tr > td {
   border-bottom: 1px solid #aeaeae2d;
 }
+
+.no--transactions {
+  margin: 70px auto 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+}
