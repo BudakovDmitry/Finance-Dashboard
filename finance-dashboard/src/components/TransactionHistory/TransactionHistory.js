@@ -4,7 +4,7 @@ import "./TransactionHistory.css";
 import TransactionHistoryItem from "../TransactionHistoryItem/TransactionHistoryItem";
 
 export default function TransactionHistory() {
-    const { transactions } = useSelector((state) => state);
+    const { transactions, darkTheme } = useSelector((state) => state);
 
     const transactionItem = transactions.map((item) => {
         return (
@@ -18,7 +18,7 @@ export default function TransactionHistory() {
     });
 
     return (
-        <div className="transaction">
+        <div className={darkTheme ? "transaction dark" : "transaction"}>
             <h3 className="transaction--title">Transaction history</h3>
             {transactions.length > 0 ? (
                 <div className="transaction--table">

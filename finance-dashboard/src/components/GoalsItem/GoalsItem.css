@@ -9,10 +9,18 @@
   margin-left: 5px;
 }
 
-.goal--title {
+.goal.dark {
+  background-color: #2f2f2f;
+}
+
+.goal--amount {
   margin: 0;
   padding: 20px 0 0 20px;
   color: #696969;
+}
+
+.goal--amount.dark {
+  color: #ffffff;
 }
 
 .goal--date {

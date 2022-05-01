@@ -1,7 +1,13 @@
 .app {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   width: 100%;
   height: 112vh;
   border-radius: 50px;
   display: flex;
+}
+
+.app.dark {
+  background-color: #121212;
+  color: #ffffff;
+  opacity: 0.8;
 }

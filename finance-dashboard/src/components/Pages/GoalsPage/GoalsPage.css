@@ -35,9 +35,10 @@
   font-weight: bold;
 }
 
-.goals--form {
-
+.goals--form--title.dark {
+  color: #FFFFFF;
 }
+
 
 .goals--form--input {
   display: block;
@@ -49,14 +50,24 @@
   padding-left: 10px;
 }
 
+.goals--form--input.dark {
+  background-color: #2f2f2f;
+}
+
 .goals--form--input--select {
   display: block;
   margin-top: 30px;
   width: 315px;
   height: 40px;
   border: 1px solid rgba(147, 146, 146, 0.538);
+  color: #3c3c3cb3;
   border-radius: 3px;
   padding-left: 10px;
+}
+
+.goals--form--input--select.dark {
+  background-color: #2f2f2f;
+  color: rgba(147, 146, 146, 0.538);
 }
 
 .goals--form--button {
@@ -76,6 +87,15 @@
   font-weight: bold;
 }
 
+.goals--form--button.dark {
+  background-color: #2f2f2f;
+  color: #ffffff;
+}
+.goals--form--button.dark:hover {
+  background-color: #373737;
+  border: 1px solid #ffffff;
+}
+
 .goals--item {
   width: 380px;
   height: 70px;
@@ -86,6 +106,10 @@
   padding: 10px;
   display: flex;
   align-items: center;
+}
+
+.goals--item.dark {
+  background-color: #2f2f2f;
 }
 
 .goals--item img {
@@ -115,12 +139,20 @@
   font-style: italic;
 }
 
+.goals--item--title.dark p {
+  color: #ffffff;
+}
+
 .goals--item--amount {
   margin-right: 22px;
-  font-size: 24px;
+  font-size: 28px;
   font-weight: bold;
   font-style: italic;
   opacity: .6;
+}
+
+.goals--item--amount.dark {
+  color: #ffffff;
 }
 
 .no--goals--item {
@@ -154,9 +186,13 @@
   text-align: center;
   font-weight: bold;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   color: red;
   border: none;
+}
+
+.button--delete.dark {
+  background-color: #2f2f2f;
 }
 
 .button--done {
@@ -166,8 +202,12 @@
   text-align: center;
   font-weight: bold;
   align-items: center;
-  background-color: #fff;
+  background-color: #ffffff;
   color: green;
   border: none;
   margin-bottom: 5px;
+}
+
+.button--done.dark {
+  background-color: #2f2f2f;
 }

@@ -52,8 +52,16 @@
   font-weight: bold;
 }
 
+.statistics--container.dark span {
+  color: #ffffff;
+}
+
 .progress--container p {
   margin: 0;
   padding: 10px 0 0 20px;
   color: #AEAEAE;
+}
+
+.progress--container.dark p {
+  color: #ffffff;
 }

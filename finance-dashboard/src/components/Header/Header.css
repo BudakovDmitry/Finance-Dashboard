@@ -12,6 +12,10 @@
   color: #404040;
 }
 
+.header--title.dark {
+  color: #FFFFFF;
+}
+
 .header--description {
   margin: 0;
   color: #AEAEAE;
@@ -45,4 +49,8 @@
 .header--account--text span {
   color: #000000;
   font-weight: bold;
+}
+
+.header--account--text.dark span {
+  color: #FFFFFF
 }
