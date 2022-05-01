@@ -33,6 +33,10 @@
   background-color: #ffffff;
 }
 
+.goals--title--link:visited {
+  color: #000000;
+}
+
 .goals--items {
   display: flex;
   width: 480px;
@@ -86,4 +90,8 @@
 .no--goals--link:hover {
   border: 1px solid #FFC145;
   background-color: #ffffff;
+}
+
+.no--goals--link:visited {
+  color: #000000;
 }

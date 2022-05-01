@@ -8,6 +8,10 @@
   margin-bottom: 20px;
 }
 
+.cards.dark {
+  background-color: #2f2f2f;
+}
+
 .card {
   padding: 20px;
   padding-right: 0;
@@ -64,10 +68,16 @@
   justify-content: space-between;
 }
 
+
 .card--limit p {
   margin: 0;
   font-size: 12px;
   color: #AEAEAE;
+}
+
+.card--limit.dark p,
+.card--limit.dark span {
+  color: #ffffff;
 }
 
 .card--limit--balance span {
@@ -87,6 +97,10 @@
 .card--info--item p {
   margin: 0;
   color: #AEAEAE;
+}
+
+.card--info--item.dark p {
+  color: #ffffff;
 }
 
 .card--info--item:nth-child(1) p:nth-child(1) {

@@ -4,6 +4,10 @@
   border-right: 1px solid #EBEBEB;
 }
 
+.sidebar.dark {
+  border-right: 1px solid #000000;
+}
+
 .sidebar--logo {
   display: flex;
   align-items: center;
@@ -11,6 +15,10 @@
   color: #0F4264;
   font-weight: bold;
   margin-bottom: 40px;
+}
+
+.sidebar--logo.dark {
+  color: #ffffff;
 }
 
 .sidebar--logo--image {
@@ -45,6 +53,11 @@ li {
   background-color: #F0F7FF;
   padding: 10px 20px;
   border-radius: 5px;
+}
+
+.sidebar--nav--item--active.dark {
+  color: #ffffff;
+  background-color: #2f2f2f;
 }
 
 .sidebar--nav--item img {

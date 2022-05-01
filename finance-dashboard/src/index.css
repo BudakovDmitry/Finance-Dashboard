@@ -1,7 +1,8 @@
 body {
   margin: 0;
   padding: 30px;
-  background-color: #F0F0F0;
+  /* background-color: #F0F0F0; */
+  background-color: #bbbbbb;
   font-family: 'Lato', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -9,7 +9,7 @@ import GoalsPageItem from "../../GoalsPageItem/GoalsPageItem";
 import { nanoid } from "nanoid";
 
 export default function GoalsPage() {
-    const { goals } = useSelector((state) => state);
+    const { goals, darkTheme } = useSelector((state) => state);
     const dispatch = useDispatch();
 
     const initialValue = {
@@ -63,7 +63,15 @@ export default function GoalsPage() {
             />
             <div className="page--goals--container">
                 <div className="goals--form--container">
-                    <h3 className="goals--form--title">Add Goals</h3>
+                    <h3
+                        className={
+                            darkTheme
+                                ? "goals--form--title dark"
+                                : "goals--form--title"
+                        }
+                    >
+                        Add Goals
+                    </h3>
                     <Formik
                         initialValues={initialValue}
                         validationSchema={goalSchema}
@@ -88,7 +96,11 @@ export default function GoalsPage() {
                                     onBlur={handleBlur}
                                     value={values.title}
                                     placeholder="Goal"
-                                    className="goals--form--input"
+                                    className={
+                                        darkTheme
+                                            ? "goals--form--input dark"
+                                            : "goals--form--input"
+                                    }
                                 />
                                 {errors.title && touched.title ? (
                                     <div className="error--input">
@@ -102,7 +114,11 @@ export default function GoalsPage() {
                                     onBlur={handleBlur}
                                     value={values.amount}
                                     placeholder="Amount"
-                                    className="goals--form--input"
+                                    className={
+                                        darkTheme
+                                            ? "goals--form--input dark"
+                                            : "goals--form--input"
+                                    }
                                 />
                                 {errors.amount && touched.amount ? (
                                     <div className="error--input">
@@ -116,7 +132,11 @@ export default function GoalsPage() {
                                     onBlur={handleBlur}
                                     value={values.date}
                                     placeholder="Date"
-                                    className="goals--form--input"
+                                    className={
+                                        darkTheme
+                                            ? "goals--form--input dark"
+                                            : "goals--form--input"
+                                    }
                                 />
                                 {errors.date && touched.date ? (
                                     <div className="error--input">
@@ -129,7 +149,11 @@ export default function GoalsPage() {
                                     onChange={handleChange}
                                     onBlur={handleBlur}
                                     value={values.type}
-                                    className="goals--form--input--select"
+                                    className={
+                                        darkTheme
+                                            ? "goals--form--input--select dark"
+                                            : "goals--form--input--select"
+                                    }
                                 >
                                     <option value="" defaultValue={""}>
                                         -- Select type --
@@ -147,7 +171,11 @@ export default function GoalsPage() {
                                 ) : null}
                                 <button
                                     type="submit"
-                                    className="goals--form--button"
+                                    className={
+                                        darkTheme
+                                            ? "goals--form--button dark"
+                                            : "goals--form--button"
+                                    }
                                 >
                                     Add
                                 </button>

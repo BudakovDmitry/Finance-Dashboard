@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import TransactionHistoryItem from "../../TransactionHistoryItem/TransactionHistoryItem";
 import "./TransactionsPage.css";
+import Header from "../../Header/Header";
 
 export default function TransactionsPage() {
     const { transactions } = useSelector((state) => state);
@@ -18,7 +19,11 @@ export default function TransactionsPage() {
 
     return (
         <div className="page--transaction">
-            <h2 className="page--transaction--title">Transactions</h2>
+            <Header
+                title="Transactions"
+                description="Get a summary of your transactions."
+                mail="2"
+            />
             <div className="page--transaction--container">
                 {transactions.length > 0 ? (
                     <div className="transaction--page--table">
@@ -35,7 +40,9 @@ export default function TransactionsPage() {
                         </table>
                     </div>
                 ) : (
-                    <h2 className="transaction--page--no--transactions">No transactions...</h2>
+                    <h2 className="transaction--page--no--transactions">
+                        No transactions...
+                    </h2>
                 )}
             </div>
         </div>

@@ -54,6 +54,7 @@ const initialState = {
             amount: 430,
         },
     ],
+    darkTheme: false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -80,6 +81,11 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 transactions: newTransactionGoalsList,
+            };
+        case "THEME_UPDATE":
+            return {
+                ...state,
+                darkTheme: !state.darkTheme,
             };
         default:
             return state;

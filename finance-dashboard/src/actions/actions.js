@@ -18,3 +18,9 @@ export const transactionCreated = (transaction) => {
         payload: transaction,
     };
 };
+
+export const themeUpdate = () => {
+    return {
+        type: "THEME_UPDATE",
+    };
+};

@@ -1,10 +1,11 @@
 import {
-  BrowserRouter as Router,
-  Route,
-  Switch,
-  Redirect,
+    BrowserRouter as Router,
+    Route,
+    Switch,
+    Redirect,
 } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import "./App.css";
 import Sidebar from "../Sidebar/Sidebar";
@@ -18,46 +19,52 @@ import LoginPage from "../Pages/LoginPage/LoginPage";
 import SignUpPage from "../Pages/SignUpPage/SignUpPage";
 
 function App() {
-  const [login, setLogin] = useState(true);
+    const [login, setLogin] = useState(true);
+    const { darkTheme } = useSelector((state) => state);
+    console.log(darkTheme);
 
-  let navigation = login ? <Sidebar /> : null;
+    let navigation = login ? <Sidebar /> : null;
 
-  return (
-    <Router>
-      <div className="app">
-        {navigation}
-        <Switch>
-          <Route exact path="/Overview">
-            <OverviewPage />
-          </Route>
-          <Route exact path="/Transactions">
-            <TransactionsPage />
-          </Route>
-          <Route exact path="/Cards">
-            <CardsPage />
-          </Route>
-          <Route exact path="/Goals">
-            <GoalsPage />
-          </Route>
-          <Route exact path="/Invoices">
-            <InvoicesPage />
-          </Route>
-          <Route exact path="/Settings">
-            <SettingsPage />
-          </Route>
-          <Route exact path="/Login">
-            <LoginPage />
-          </Route>
-          <Route exact path="/SignUp">
-            <SignUpPage />
-          </Route>
-          <Route exact path="/">
-            {login ? <Redirect to="/Overview" /> : <Redirect to="/Login" />}
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
+    return (
+        <Router>
+            <div className={darkTheme ? "app dark" : "app"}>
+                {navigation}
+                <Switch>
+                    <Route exact path="/Overview">
+                        <OverviewPage />
+                    </Route>
+                    <Route exact path="/Transactions">
+                        <TransactionsPage />
+                    </Route>
+                    <Route exact path="/Cards">
+                        <CardsPage />
+                    </Route>
+                    <Route exact path="/Goals">
+                        <GoalsPage />
+                    </Route>
+                    <Route exact path="/Invoices">
+                        <InvoicesPage />
+                    </Route>
+                    <Route exact path="/Settings">
+                        <SettingsPage />
+                    </Route>
+                    <Route exact path="/Login">
+                        <LoginPage />
+                    </Route>
+                    <Route exact path="/SignUp">
+                        <SignUpPage />
+                    </Route>
+                    <Route exact path="/">
+                        {login ? (
+                            <Redirect to="/Overview" />
+                        ) : (
+                            <Redirect to="/Login" />
+                        )}
+                    </Route>
+                </Switch>
+            </div>
+        </Router>
+    );
 }
 
 export default App;
