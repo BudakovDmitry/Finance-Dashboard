@@ -1,26 +1,26 @@
 const initialState = {
     goals: [
-        // {
-        //     id: 1,
-        //     title: "Holidays",
-        //     date: "12/20/20",
-        //     amount: 500,
-        //     type: "Mountain",
-        // },
-        // {
-        //     id: 2,
-        //     title: "Renovation",
-        //     date: "12/20/20",
-        //     amount: 200,
-        //     type: "Brash",
-        // },
-        // {
-        //     id: 3,
-        //     title: "PlayStation 5",
-        //     date: "12/20/20",
-        //     amount: 820,
-        //     type: "Joystick",
-        // },
+        {
+            id: 1,
+            title: "Holidays",
+            date: "12/20/20",
+            amount: 500,
+            type: "Mountain",
+        },
+        {
+            id: 2,
+            title: "Renovation",
+            date: "12/20/20",
+            amount: 200,
+            type: "Brash",
+        },
+        {
+            id: 3,
+            title: "PlayStation 5",
+            date: "12/20/20",
+            amount: 820,
+            type: "Joystick",
+        },
     ],
     transactions: [
         {
@@ -71,6 +71,15 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 goals: newGoalsList,
+            };
+        case "TRANSACTION_CREATED":
+            let newTransactionGoalsList = [
+                ...state.transactions,
+                action.payload,
+            ];
+            return {
+                ...state,
+                transactions: newTransactionGoalsList,
             };
         default:
             return state;

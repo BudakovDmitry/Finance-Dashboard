@@ -60,3 +60,12 @@
   border-bottom: 1px solid #aeaeae2d;
   margin-bottom: 10px;
 }
+
+.transaction--page--no--transactions {
+  margin: 170px auto 0 auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  letter-spacing: 2px;
+  word-spacing: 5px;
+}
