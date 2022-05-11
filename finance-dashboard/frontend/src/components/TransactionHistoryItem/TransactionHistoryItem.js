@@ -2,7 +2,7 @@ export default function TransactionHistoryItem({
   reciever,
   type,
   date,
-  amount,
+  amount
 }) {
   return (
     <tr>

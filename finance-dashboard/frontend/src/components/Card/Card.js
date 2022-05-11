@@ -1,5 +1,5 @@
-import "./Card.css";
-import CardImg from "../../images/Card.png";
+import './Card.css';
+import CardImg from '../../images/Card.png';
 
 export default function Card() {
   return (

@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import Logo from "../../../images/Logo.png";
-import "./LoginPage.css";
+import { Link } from 'react-router-dom';
+import Logo from '../../../images/Logo.png';
+import './LoginPage.css';
 
 export default function LoginPage() {
   return (

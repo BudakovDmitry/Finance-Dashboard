@@ -1,27 +1,27 @@
-import { Formik } from "formik";
-import * as Yup from "yup";
-import { Link } from "react-router-dom";
-import "./SignUpPage.css";
+import { Formik } from 'formik';
+import * as Yup from 'yup';
+import { Link } from 'react-router-dom';
+import './SignUpPage.css';
 
 const SignupSchema = Yup.object({
-  email: Yup.string().email("Invalid email!").required("Required"),
+  email: Yup.string().email('Invalid email!').required('Required'),
   firstName: Yup.string()
-    .min(2, "To short!")
-    .max(50, "To long!")
-    .required("Required"),
+    .min(2, 'To short!')
+    .max(50, 'To long!')
+    .required('Required'),
   lastName: Yup.string()
-    .min(2, "To short!")
-    .max(50, "To long!")
-    .required("Required"),
+    .min(2, 'To short!')
+    .max(50, 'To long!')
+    .required('Required'),
   password: Yup.string()
     .matches(
       /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
-      "Password must contain at least 8 characters, one upper case, one lower case and one number"
+      'Password must contain at least 8 characters, one upper case, one lower case and one number'
     )
-    .required("Required"),
+    .required('Required'),
   confirmPassword: Yup.string()
-    .oneOf([Yup.ref("password"), null], "Passwords must match")
-    .required("Required"),
+    .oneOf([Yup.ref('password'), null], 'Passwords must match')
+    .required('Required')
 });
 
 export default function SignUpPage() {
@@ -31,14 +31,14 @@ export default function SignUpPage() {
         <h2 className="signup--title">Registration</h2>
         <Formik
           initialValues={{
-            email: "",
-            firstName: "",
-            lastName: "",
-            password: "",
-            confirmPassword: "",
+            email: '',
+            firstName: '',
+            lastName: '',
+            password: '',
+            confirmPassword: ''
           }}
           validationSchema={SignupSchema}
-          onSubmit={(values) => {
+          onSubmit={values => {
             console.log(values);
           }}
         >
@@ -49,7 +49,7 @@ export default function SignUpPage() {
             handleChange,
             handleBlur,
             handleSubmit,
-            isSubmitting,
+            isSubmitting
           }) => (
             <form onSubmit={handleSubmit} className="signup--form">
               <input

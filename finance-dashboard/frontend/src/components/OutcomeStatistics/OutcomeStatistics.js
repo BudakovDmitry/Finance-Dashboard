@@ -1,33 +1,33 @@
-import { useState } from "react";
-import "./OutcomeStatistics.css";
-import StatisticsItem from "../StatisticsItem/StatisticsItem";
+import { useState } from 'react';
+import './OutcomeStatistics.css';
+import StatisticsItem from '../StatisticsItem/StatisticsItem';
 
 export default function OutcomeStatistics() {
   const [statisticsItem, setStatisticsItem] = useState([
     {
-      type: "Shopping",
+      type: 'Shopping',
       percentage: 52,
-      img: "Cart",
-      color: "orange",
-      colorLine: "warning",
+      img: 'Cart',
+      color: 'orange',
+      colorLine: 'warning'
     },
     {
-      type: "Electronics",
+      type: 'Electronics',
       percentage: 21,
-      img: "Car",
-      color: "green",
-      colorLine: "success",
+      img: 'Car',
+      color: 'green',
+      colorLine: 'success'
     },
     {
-      type: "Travels",
+      type: 'Travels',
       percentage: 74,
-      img: "Plane",
-      color: "blue",
-      colorLine: "info",
-    },
+      img: 'Plane',
+      color: 'blue',
+      colorLine: 'info'
+    }
   ]);
 
-  const statItem = statisticsItem.map((item) => {
+  const statItem = statisticsItem.map(item => {
     return (
       <StatisticsItem
         type={item.type}
