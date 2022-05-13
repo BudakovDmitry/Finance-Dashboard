@@ -52,6 +52,7 @@
 
 .goals--form--input.dark {
   background-color: #2f2f2f;
+  color: #ffffff
 }
 
 .goals--form--input--select {
@@ -67,7 +68,7 @@
 
 .goals--form--input--select.dark {
   background-color: #2f2f2f;
-  color: rgba(147, 146, 146, 0.538);
+  color: #ffffff
 }
 
 .goals--form--button {
