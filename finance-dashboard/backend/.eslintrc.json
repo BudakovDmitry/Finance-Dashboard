@@ -1,13 +1,15 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "amd": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
-    "airbnb",
-    "prettier"
+    "plugin:jsx-a11y/recommended",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -17,52 +19,76 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  },
+  "globals": {
+    "JSX": true,
+    "NodeJS": true
+  },
+  "plugins": ["simple-import-sort", "prettier", "import"],
   "rules": {
-    "prettier/prettier": "warn",
-    "constructor-super": "error",
-    "no-const-assign": "error",
-    "no-dupe-args": "error",
-    "no-dupe-else-if": "error",
-    "no-dupe-keys": "error",
-    "no-duplicate-case": "error",
-    "no-duplicate-imports": "error",
-    "no-empty-pattern": "error",
-    "no-sparse-arrays": "error",
-    "no-unreachable": "error",
-    "no-unused-vars": "error",
-    "block-scoped-var": "error",
-    "camelcase": "error",
-    "consistent-return": "error",
-    "curly": "error",
-    "default-case": "error",
-    "default-case-last": "error",
-    "eqeqeq": ["error", "always"],
-    "dot-notation": "error",
-    "init-declarations": ["error", "always"],
-    "multiline-comment-style": ["error", "separate-lines"],
-    "new-cap": ["error", { "newIsCap": true }],
+    "no-shadow": "off",
+    "react/function-component-definition": ["off"],
+    "react/prop-types": ["off"],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "no-confusing-arrow": "off",
+    "default-param-last": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "max-lines-per-function": "off",
+    "max-statements": "off",
+    "react/jsx-filename-extension": "off",
+    "max-len": "off",
+    "import/extensions": "off",
+    "react/self-closing-comp": "off",
+    "import/prefer-default-export": "off",
+    "camelcase": "off",
+    "spaced-comment": "off",
+    "no-plusplus": "off",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "class-methods-use-this": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "no-use-before-define": "off",
+    "react/no-unknown-property": "off",
+    "no-unused-expressions": "off",
+    "react/destructuring-assignment": "off",
+    "prefer-spread": "off",
+    "no-unsafe-optional-chaining": "off",
+    "no-underscore-dangle": "off",
+    "@typescript-eslint/no-shadow": "off",
+    "react/no-unescaped-entities": "off",
+    "consistent-return": "off",
+    "react/require-default-props": "off",
+    "import/no-extraneous-dependencies": "off",
+    "jsx-a11y/no-autofocus": "off",
     "no-console": ["error", { "allow": ["warn", "error"] }],
-    "no-delete-var": "error",
-    "no-empty": "error",
-    "no-extra-semi": "error",
-    "no-redeclare": "error",
-    "array-bracket-spacing": ["error", "always"],
-    "arrow-spacing": "error",
-    "block-spacing": "error",
-    "comma-spacing": ["error", { "before": false, "after": true }],
-    "eol-last": ["error", "always"],
-    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
-    "max-len": ["error", { "code": 80 }],
-    "no-extra-parens": "error",
-    "no-mixed-spaces-and-tabs": ["error", "smart-tabs"],
-    "no-multi-spaces": "error",
-    "no-multiple-empty-lines": "error",
-    "no-trailing-spaces": "error",
-    "object-curly-newline": ["error", "always"],
-    "padding-line-between-statements": [
-      "error",
-      { "blankLine": "always", "prev": "*", "next": "return" }
+    "import/first": "warn",
+    "import/newline-after-import": "warn",
+    "import/no-duplicates": "warn",
+    "newline-before-return": "error",
+    "simple-import-sort/exports": "error",
+    "simple-import-sort/imports": [
+      "warn",
+      {
+        "groups": [
+          ["^react", "^@?\\w"],
+          ["^.+\\.?(css)$"],
+          ["^\\u0000"],
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          ["^(@|components | utils | pages | types)(/.*|$)"]
+        ]
+      }
     ]
   }
 }
