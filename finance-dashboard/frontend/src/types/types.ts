@@ -13,3 +13,7 @@ export interface SignupType {
   password: string;
   confirmPassword: string;
 }
+
+export type ReactChildren = {
+  children: JSX.Element;
+};

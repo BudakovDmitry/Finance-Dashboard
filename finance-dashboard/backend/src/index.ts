@@ -1,5 +1,6 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors'
 import AppRouter from './routes/index.js';
 
 const PORT = 5000;
@@ -8,7 +9,7 @@ const DB_URL =
 
 const app = express();
 const router = new AppRouter(app);
-
+app.use(cors())
 app.set('port', process.env.PORT || 5000);
 app.use(express.json());
 

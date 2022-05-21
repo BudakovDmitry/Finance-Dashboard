@@ -1,6 +1,6 @@
 import Header from 'src/components/Header/Header';
-import { useTransactionsPage } from 'src/components/Pages/TransactionsPage/useTransactionsPage';
 import TransactionHistoryItem from 'src/components/TransactionHistoryItem/TransactionHistoryItem';
+import { useTransactionsPage } from 'src/pages/TransactionsPage/useTransactionsPage';
 
 import './TransactionsPage.css';
 

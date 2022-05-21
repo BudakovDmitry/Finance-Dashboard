@@ -1,6 +1,6 @@
 import { Switch } from '@mui/material';
 import Header from 'src/components/Header/Header';
-import { useSettingsPage } from 'src/components/Pages/SettingsPage/useSettingsPage';
+import { useSettingsPage } from 'src/pages/SettingsPage/useSettingsPage';
 
 import './SettingsPage.css';
 

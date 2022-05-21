@@ -3,8 +3,8 @@ import Goals from 'src/components/Goals/Goals';
 import Header from 'src/components/Header/Header';
 import NewTransaction from 'src/components/NewTransaction/NewTransaction';
 import OutcomeStatistics from 'src/components/OutcomeStatistics/OutcomeStatistics';
-import { useOverviewPage } from 'src/components/Pages/OverviewPage/useOverviewPage';
 import TransactionHistory from 'src/components/TransactionHistory/TransactionHistory';
+import { useOverviewPage } from 'src/pages/OverviewPage/useOverviewPage';
 
 import './OverviewPage.css';
 

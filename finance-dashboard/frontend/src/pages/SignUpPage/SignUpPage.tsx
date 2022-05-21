@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Formik } from 'formik';
-import { SignupSchema } from 'src/components/Pages/SignUpPage/validationSignup';
+import { SignupSchema } from 'src/pages/SignUpPage/validationSignup';
 import { SignupType } from 'src/types/types';
 
 import './SignUpPage.css';

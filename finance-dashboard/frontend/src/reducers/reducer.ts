@@ -8,21 +8,21 @@ const initialState = {
       date: '12/20/20',
       amount: 500,
       type: 'Mountain'
-    },
-    {
-      id: 2,
-      title: 'Renovation',
-      date: '12/20/20',
-      amount: 200,
-      type: 'Brash'
-    },
-    {
-      id: 3,
-      title: 'PlayStation 5',
-      date: '12/20/20',
-      amount: 820,
-      type: 'Joystick'
     }
+    // {
+    //   id: 2,
+    //   title: 'Renovation',
+    //   date: '12/20/20',
+    //   amount: 200,
+    //   type: 'Brash'
+    // },
+    // {
+    //   id: 3,
+    //   title: 'PlayStation 5',
+    //   date: '12/20/20',
+    //   amount: 820,
+    //   type: 'Joystick'
+    // }
   ],
   transactions: [
     {
@@ -72,6 +72,11 @@ const initialState = {
 
 const reducer = (state = initialState, action: AnyAction) => {
   switch (action.type) {
+    case 'GET_ALL_GOALS':
+      return {
+        ...state,
+        goals: [...state.goals, action.payload]
+      };
     case 'GOAL_CREATED':
       return {
         ...state,

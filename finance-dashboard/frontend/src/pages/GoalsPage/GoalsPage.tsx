@@ -1,8 +1,9 @@
 import { Formik } from 'formik';
 import GoalsPageItem from 'src/components/GoalsPageItem/GoalsPageItem';
 import Header from 'src/components/Header/Header';
-import { useGoalsPage } from 'src/components/Pages/GoalsPage/useGoalsPage';
-import { goalSchema } from 'src/components/Pages/GoalsPage/validationGoal';
+import Loader from 'src/components/Loader/Loader';
+import { useGoalsPage } from 'src/pages/GoalsPage/useGoalsPage';
+import { goalSchema } from 'src/pages/GoalsPage/validationGoal';
 import { GoalType } from 'src/types/types';
 
 import './GoalsPage.css';
@@ -16,17 +17,19 @@ const initialValue: GoalType = {
 };
 
 export default function GoalsPage() {
-  const { addGoal, goals, darkTheme } = useGoalsPage();
+  const { addGoal, darkTheme, goals } = useGoalsPage();
 
-  const goalItem = goals.map(item => {
+  if (!goals) return <Loader />;
+
+  const goalItem = goals.map((item: any) => {
     return (
       <GoalsPageItem
-        key={item.id}
+        key={item._id}
         type={item.type}
         title={item.title}
         date={item.date}
         amount={item.amount}
-        id={item.id}
+        id={item._id}
       />
     );
   });
