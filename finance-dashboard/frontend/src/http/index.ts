@@ -1,6 +1,6 @@
 export const post = async <T>(
   url: string,
-  body: string | FormData,
+  body: string,
   config: object = {}
 ): Promise<T> => {
   const options = {

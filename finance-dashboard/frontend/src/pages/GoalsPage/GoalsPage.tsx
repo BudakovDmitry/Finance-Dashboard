@@ -8,8 +8,7 @@ import { GoalType } from 'src/types/types';
 
 import './GoalsPage.css';
 
-const initialValue: GoalType = {
-  id: '',
+const initialValue = {
   type: '',
   title: '',
   date: '',
@@ -17,7 +16,7 @@ const initialValue: GoalType = {
 };
 
 export default function GoalsPage() {
-  const { addGoal, darkTheme, goals } = useGoalsPage();
+  const { addGoalHandle, darkTheme, goals } = useGoalsPage();
 
   if (!goals) return <Loader />;
 
@@ -49,7 +48,7 @@ export default function GoalsPage() {
           <Formik
             initialValues={initialValue}
             validationSchema={goalSchema}
-            onSubmit={values => addGoal(values)}
+            onSubmit={values => addGoalHandle(values)}
           >
             {({
               values,
