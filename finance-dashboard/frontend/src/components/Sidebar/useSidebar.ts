@@ -9,7 +9,8 @@ export const useSidebar = () => {
     { name: 'Cards', id: 3 },
     { name: 'Invoices', id: 4 },
     { name: 'Goals', id: 5 },
-    { name: 'Settings', id: 6 }
+    { name: 'News', id: 6 },
+    { name: 'Settings', id: 7 }
   ]);
 
   return {

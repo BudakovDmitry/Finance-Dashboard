@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { getAllGoals } from 'src/http/api/goalsApi';
+import { get } from 'src/http';
 import { ReactChildren } from 'src/types/types';
 import { Logger } from 'src/utils';
 import { SWRConfig } from 'swr';
@@ -36,7 +36,7 @@ export const SwrProvider: FC<ReactChildren> = ({ children }) => {
     <SWRConfig
       value={{
         provider: () => new Map(),
-        fetcher: getAllGoals,
+        fetcher: get,
         revalidateOnFocus: false,
         use: [logger]
       }}

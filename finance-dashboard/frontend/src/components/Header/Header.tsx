@@ -25,10 +25,10 @@ export default function Header<HeaderProps>({ title = '', description = '' }) {
       </div>
       <div className="header--account--container">
         <Badge badgeContent={mail.length} color="error">
-          <MailIcon color="disabled" />
+          <MailIcon />
         </Badge>
         <Badge color="error" variant="dot" overlap="circular">
-          <NotificationsIcon color="disabled" />
+          <NotificationsIcon />
         </Badge>
         <img src={User} alt="User" />
         <div className="header--account">
