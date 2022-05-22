@@ -7,6 +7,7 @@ const Cards = require('src/images/icon/Cards-icon.png');
 const Invoices = require('src/images/icon/Invoices-icon.png');
 const Goals = require('src/images/icon/Goals-icon.png');
 const Settings = require('src/images/icon/Settings-icon.png');
+const News = require('src/images/icon/News-icon.png');
 
 interface SidebarItemProps {
   name: string;
@@ -27,6 +28,8 @@ export default function SidebarItem<SidebarItemProps>({ name = '' }) {
         return Invoices;
       case 'Goals':
         return Goals;
+      case 'News':
+        return News;
       case 'Settings':
         return Settings;
       default:

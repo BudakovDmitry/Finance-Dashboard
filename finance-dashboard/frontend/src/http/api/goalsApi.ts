@@ -1,14 +1,15 @@
 import * as api from 'src/http/index';
+import { API } from 'src/utils/constants';
 
 const getHeaders = async (headers?: object) => ({
   ...headers
 });
 
-export const getAllGoals = async <T>(
+export const get = async <T>(
   endpoint: string,
   searchParams: Record<string, string>
 ): Promise<T> =>
-  api.get('http://localhost:5000' + endpoint, searchParams, {
+  api.get(API + endpoint, searchParams, {
     headers: await getHeaders()
   });
 
@@ -17,7 +18,7 @@ export const post = async <T>(
   body: string,
   headers?: object
 ): Promise<T> =>
-  api.post('http://localhost:5000' + endpoint, body, {
+  api.post(API + endpoint, body, {
     headers: await getHeaders({
       'Content-Type': 'application/json',
       ...headers
@@ -29,7 +30,7 @@ export const remove = async <T>(
   id: string,
   headers?: object
 ): Promise<T> =>
-  api.remove('http://localhost:5000' + endpoint + '/' + id, {
+  api.remove(API + endpoint + '/' + id, {
     headers: await getHeaders({
       'Content-Type': 'application/json',
       ...headers
