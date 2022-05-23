@@ -1,12 +1,5 @@
 import Goal from '../models/Goal.js';
-
-interface GoalType {
-    _id: string,
-    title: string,
-    amount: number,
-    date: string,
-    type: string
-}
+import { GoalType } from '../types/types'
 
 class GoalService {
   async createGoal(goal: GoalType) {
