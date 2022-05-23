@@ -1,3 +1,4 @@
+import Loader from 'src/components/Loader/Loader';
 import { useTransactionHistory } from 'src/components/TransactionHistory/useTransactionHistory';
 import TransactionHistoryItem from 'src/components/TransactionHistoryItem/TransactionHistoryItem';
 
@@ -6,7 +7,9 @@ import './TransactionHistory.css';
 export default function TransactionHistory() {
   const { transactions, darkTheme } = useTransactionHistory();
 
-  const transactionItem = transactions.map(item => {
+  if (!transactions) return <Loader />;
+
+  const transactionItem = transactions.map((item: any) => {
     return (
       <TransactionHistoryItem
         key={item.id}

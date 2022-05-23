@@ -1,4 +1,6 @@
+import DoughnutChart from 'src/components/DoughnutChart/DoughnutChart';
 import Header from 'src/components/Header/Header';
+import Loader from 'src/components/Loader/Loader';
 import TransactionHistoryItem from 'src/components/TransactionHistoryItem/TransactionHistoryItem';
 import { useTransactionsPage } from 'src/pages/TransactionsPage/useTransactionsPage';
 
@@ -7,10 +9,12 @@ import './TransactionsPage.css';
 export default function TransactionsPage() {
   const { transactions } = useTransactionsPage();
 
-  const transactionItem = transactions.map(item => {
+  if (!transactions) return <Loader />;
+
+  const transactionItem = transactions.map((item: any) => {
     return (
       <TransactionHistoryItem
-        key={item.id}
+        key={item._id}
         reciever={item.reciever}
         type={item.type}
         date={item.date}
@@ -45,6 +49,9 @@ export default function TransactionsPage() {
             No transactions...
           </h2>
         )}
+        <div className="page--transaction--chart">
+          <DoughnutChart />
+        </div>
       </div>
     </div>
   );

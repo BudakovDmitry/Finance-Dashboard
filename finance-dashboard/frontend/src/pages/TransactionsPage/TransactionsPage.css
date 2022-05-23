@@ -10,8 +10,9 @@
 
 .transaction--page--table {
   padding: 20px 60px;
-  height: 500px;
+  height: 200px;
   overflow-y: scroll;
+  margin-bottom: 40px;
 }
 
 .transaction--page--table table {
@@ -68,4 +69,8 @@
   font-size: 20px;
   letter-spacing: 2px;
   word-spacing: 5px;
+}
+
+.page--transaction--chart {
+  width: 400px;
 }
