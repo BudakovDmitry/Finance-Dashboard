@@ -1,3 +1,4 @@
 export enum Endpoints {
-  GOALS = '/goals'
+  GOALS = '/goals',
+  TRANSACTIONS = '/transactions'
 }

@@ -1,15 +1,8 @@
-import { post, remove } from 'src/http/api/goalsApi';
+import { post, remove } from 'src/http/api/financeDashboardApi';
 import { API } from 'src/utils/constants';
 import { Endpoints } from 'src/utils/endpoints';
+import { handleApiResponse } from 'src/utils/helpers';
 import useSWR from 'swr';
-
-export const handleApiResponse = (response: any) => {
-  if (response?.err) {
-    throw new Error(response?.err.message);
-  }
-
-  return response;
-};
 
 export const useGoals = (searchParams: string = '') => {
   const {
