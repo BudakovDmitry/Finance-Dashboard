@@ -1,9 +1,9 @@
 import Transaction from '../models/Transaction.js';
-import { TransactionType } from '../types/types';
+import { TransactionType, CreateTransactionType } from '../types/types';
 
 
 class TransactionsService {
-  async createTransaction(transaction: TransactionType) {
+  async createTransaction(transaction: CreateTransactionType) {
     const createdTransaction = await Transaction.create(transaction);
     return createdTransaction;
   }

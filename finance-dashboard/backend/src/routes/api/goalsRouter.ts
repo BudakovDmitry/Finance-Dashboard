@@ -1,7 +1,10 @@
 import { Router } from 'express';
 import GoalController from '../../controllers/GoalController.js';
 
+
+
 const goalRouter: Router = Router();
+
 
 goalRouter.post('', GoalController.createGoal);
 goalRouter.get('', GoalController.getAllGoals);
