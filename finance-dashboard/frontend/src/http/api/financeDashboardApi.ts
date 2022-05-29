@@ -1,9 +1,6 @@
 import * as api from 'src/http/index';
 import { API } from 'src/utils/constants';
-
-const getHeaders = async (headers?: object) => ({
-  ...headers
-});
+import { getHeaders } from 'src/utils/helpers';
 
 export const get = async <T>(
   endpoint: string,

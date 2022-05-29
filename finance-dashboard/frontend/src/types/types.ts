@@ -3,7 +3,14 @@ export interface GoalType {
   type: string;
   title: string;
   date: string;
-  amount: string;
+  amount: number;
+}
+
+export interface CreateGoalType {
+  type: string;
+  title: string;
+  date: string;
+  amount: number;
 }
 
 export interface SignupType {

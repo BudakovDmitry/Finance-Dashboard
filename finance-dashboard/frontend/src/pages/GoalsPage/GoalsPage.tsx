@@ -4,15 +4,15 @@ import Header from 'src/components/Header/Header';
 import Loader from 'src/components/Loader/Loader';
 import { useGoalsPage } from 'src/pages/GoalsPage/useGoalsPage';
 import { goalSchema } from 'src/pages/GoalsPage/validationGoal';
-import { GoalType } from 'src/types/types';
+import { CreateGoalType } from 'src/types/types';
 
 import './GoalsPage.css';
 
-const initialValue = {
+const initialValue: CreateGoalType = {
   type: '',
   title: '',
   date: '',
-  amount: ''
+  amount: 0
 };
 
 export default function GoalsPage() {

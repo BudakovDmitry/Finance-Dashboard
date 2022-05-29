@@ -1,0 +1,16 @@
+.currency {
+  margin-right: 20px;
+}
+
+.currency--a {
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.currency--b {
+  color: gray;
+  font-size: 12px;
+  margin: 0;
+}

@@ -12,7 +12,7 @@ export default function TransactionHistory() {
   const transactionItem = transactions.map((item: any) => {
     return (
       <TransactionHistoryItem
-        key={item.id}
+        key={item._id}
         reciever={item.reciever}
         type={item.type}
         date={item.date}
