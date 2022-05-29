@@ -12,6 +12,7 @@ import CardsPage from 'src/pages/CardsPage/CardsPage';
 import GoalsPage from 'src/pages/GoalsPage/GoalsPage';
 import InvoicesPage from 'src/pages/InvoicesPage/InvoicesPage';
 import LoginPage from 'src/pages/LoginPage/LoginPage';
+import NewsPage from 'src/pages/NewsPage/NewsPage';
 import OverviewPage from 'src/pages/OverviewPage/OverviewPage';
 import SettingsPage from 'src/pages/SettingsPage/SettingsPage';
 import SignUpPage from 'src/pages/SignUpPage/SignUpPage';
@@ -45,6 +46,9 @@ function App() {
             </Route>
             <Route exact path="/Invoices">
               <InvoicesPage />
+            </Route>
+            <Route exact path="/News">
+              <NewsPage />
             </Route>
             <Route exact path="/Settings">
               <SettingsPage />

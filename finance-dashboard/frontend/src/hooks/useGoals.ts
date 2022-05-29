@@ -1,4 +1,7 @@
-import axios from 'axios';
+import { post, remove } from 'src/http/api/financeDashboardApi';
+import { API } from 'src/utils/constants';
+import { Endpoints } from 'src/utils/endpoints';
+import { handleApiResponse } from 'src/utils/helpers';
 import useSWR from 'swr';
 
 export const useGoals = (searchParams: string = '') => {
@@ -6,7 +9,12 @@ export const useGoals = (searchParams: string = '') => {
     data: goals,
     mutate,
     error
-  } = useSWR(() => ['/api/goals', searchParams]);
+  } = useSWR(() => [API + Endpoints.GOALS, searchParams]);
 
-  return { goals, mutate, error };
+  const addGoal = (goal: any) => post(Endpoints.GOALS, JSON.stringify(goal));
+
+  const deleteGoal = (id: string) =>
+    remove(Endpoints.GOALS, id).then(handleApiResponse);
+
+  return { goals, mutate, error, addGoal, deleteGoal };
 };

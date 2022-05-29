@@ -1,7 +1,7 @@
-import { useAppSelector } from 'src/hooks/hooks';
+import { useTransactions } from 'src/hooks/useTransactions';
 
 export const useTransactionsPage = () => {
-  const { transactions } = useAppSelector(state => state);
+  const { transactions } = useTransactions();
 
   return {
     transactions

@@ -1,6 +1,7 @@
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import Badge from '@mui/material/Badge';
+import CurrencyBoard from 'src/components/CurrencyBoard/CurrencyBoard';
 import { useHeader } from 'src/components/Header/useHeader';
 
 import './Header.css';
@@ -23,12 +24,15 @@ export default function Header<HeaderProps>({ title = '', description = '' }) {
         </h1>
         <p className="header--description">{description}</p>
       </div>
+      <div className="header--currency">
+        <CurrencyBoard />
+      </div>
       <div className="header--account--container">
         <Badge badgeContent={mail.length} color="error">
-          <MailIcon color="disabled" />
+          <MailIcon />
         </Badge>
         <Badge color="error" variant="dot" overlap="circular">
-          <NotificationsIcon color="disabled" />
+          <NotificationsIcon />
         </Badge>
         <img src={User} alt="User" />
         <div className="header--account">

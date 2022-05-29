@@ -5,7 +5,7 @@ const Mountain = require('src/images/icon/Mountain-icon.png');
 const Brash = require('src/images/icon/Brash-icon.png');
 
 interface GoalsPageItemProps {
-  id: number;
+  id: string;
   type: string;
   title: string;
   date: string;
@@ -13,7 +13,7 @@ interface GoalsPageItemProps {
 }
 
 export default function GoalsPageItem<GoalsPageItemProps>({
-  id = 0,
+  id = '',
   type = '',
   title = '',
   date = '',
