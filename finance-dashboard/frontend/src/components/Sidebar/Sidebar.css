@@ -6,6 +6,7 @@
 
 .sidebar.dark {
   border-right: 1px solid #000000;
+
 }
 
 .sidebar--logo {
@@ -46,6 +47,7 @@ li {
   height: 20px;
   padding: 10px 20px;
   margin-bottom: 10px;
+  color: #000000;
 }
 
 .sidebar--nav--item--active {
@@ -53,11 +55,21 @@ li {
   background-color: #F0F7FF;
   padding: 10px 20px;
   border-radius: 5px;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.124);
 }
 
 .sidebar--nav--item--active.dark {
   color: #ffffff;
   background-color: #2f2f2f;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .sidebar--nav--item img {
@@ -75,6 +87,7 @@ li {
   width: 60px;
   margin: 0 auto;
   margin-top: 100px;
+  
 }
 
 .sidebar--promo p {

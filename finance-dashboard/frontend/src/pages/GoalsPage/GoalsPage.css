@@ -51,8 +51,13 @@
 }
 
 .goals--form--input.dark {
-  background-color: #2f2f2f;
-  color: #ffffff
+  /* background-color: #2f2f2f; */
+  color: #ffffff;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .goals--form--input--select {
@@ -64,11 +69,19 @@
   color: #3c3c3cb3;
   border-radius: 3px;
   padding-left: 10px;
+
+
 }
 
 .goals--form--input--select.dark {
-  background-color: #2f2f2f;
-  color: #ffffff
+  /* background-color: #2f2f2f; */
+  color: #ffffff;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .goals--form--button {
@@ -91,10 +104,22 @@
 .goals--form--button.dark {
   background-color: #2f2f2f;
   color: #ffffff;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 .goals--form--button.dark:hover {
   background-color: #373737;
   border: 1px solid #ffffff;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(26, 41, 68, 0.89);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .goals--item {
@@ -111,6 +136,11 @@
 
 .goals--item.dark {
   background-color: #2f2f2f;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
 }
 
 .goals--item img {
@@ -194,6 +224,11 @@
 
 .button--delete.dark {
   background-color: #2f2f2f;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+
 }
 
 .button--done {
@@ -211,4 +246,9 @@
 
 .button--done.dark {
   background-color: #2f2f2f;
+
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+
 }
