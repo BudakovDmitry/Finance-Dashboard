@@ -10,16 +10,18 @@ interface GoalsPageItemProps {
   title: string;
   date: string;
   amount: number;
+  removeGoal: (id: string) => void;
 }
 
-export default function GoalsPageItem<GoalsPageItemProps>({
+const GoalsPageItem = ({
   id = '',
   type = '',
   title = '',
   date = '',
-  amount = 0
-}) {
-  const { deleteItem, darkTheme } = useGoalsPageItem();
+  amount = 0,
+  removeGoal = () => {}
+}: GoalsPageItemProps) => {
+  const { darkTheme } = useGoalsPageItem();
 
   const getImage = (type: string): string => {
     switch (type) {
@@ -52,13 +54,13 @@ export default function GoalsPageItem<GoalsPageItemProps>({
       </p>
       <div className="goals--item--button">
         <button
-          onClick={() => deleteItem(id)}
+          onClick={() => removeGoal(id)}
           className={darkTheme ? 'button--done dark' : 'button--done'}
         >
           &#10003;
         </button>
         <button
-          onClick={() => deleteItem(id)}
+          onClick={() => removeGoal(id)}
           className={darkTheme ? 'button--delete dark' : 'button--delete'}
         >
           &#10007;
@@ -66,4 +68,6 @@ export default function GoalsPageItem<GoalsPageItemProps>({
       </div>
     </div>
   );
-}
+};
+
+export default GoalsPageItem;

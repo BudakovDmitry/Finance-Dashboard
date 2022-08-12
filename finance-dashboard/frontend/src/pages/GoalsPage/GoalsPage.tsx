@@ -16,7 +16,7 @@ const initialValue: CreateGoalType = {
 };
 
 export default function GoalsPage() {
-  const { addGoalHandle, darkTheme, goals } = useGoalsPage();
+  const { addGoalHandle, darkTheme, goals, removeGoal } = useGoalsPage();
 
   if (!goals) return <Loader />;
 
@@ -29,6 +29,7 @@ export default function GoalsPage() {
         date={item.date}
         amount={item.amount}
         id={item._id}
+        removeGoal={removeGoal}
       />
     );
   });

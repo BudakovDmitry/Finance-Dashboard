@@ -11,10 +11,7 @@ export const useGoals = (searchParams: string = '') => {
     error
   } = useSWR(() => [API + Endpoints.GOALS, searchParams]);
 
-  const addGoal = (goal: any) => {
-    post(Endpoints.GOALS, JSON.stringify(goal));
-    mutate();
-  };
+  const addGoal = (goal: any) => post(Endpoints.GOALS, JSON.stringify(goal));
 
   const deleteGoal = (id: string) =>
     remove(Endpoints.GOALS, id).then(handleApiResponse);

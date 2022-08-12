@@ -5,6 +5,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import { ToastProvider } from 'react-toast-notifications';
 import Sidebar from 'src/components/Sidebar/Sidebar';
 import { SwrProvider } from 'src/context/SwrContext';
 import { useAppSelector } from 'src/hooks/hooks';
@@ -28,43 +29,45 @@ function App() {
 
   return (
     <SwrProvider>
-      <Router>
-        <div className={darkTheme ? 'app dark' : 'app'}>
-          {navigation}
-          <Switch>
-            <Route exact path="/Overview">
-              <OverviewPage />
-            </Route>
-            <Route exact path="/Transactions">
-              <TransactionsPage />
-            </Route>
-            <Route exact path="/Cards">
-              <CardsPage />
-            </Route>
-            <Route exact path="/Goals">
-              <GoalsPage />
-            </Route>
-            <Route exact path="/Invoices">
-              <InvoicesPage />
-            </Route>
-            <Route exact path="/News">
-              <NewsPage />
-            </Route>
-            <Route exact path="/Settings">
-              <SettingsPage />
-            </Route>
-            <Route exact path="/Login">
-              <LoginPage />
-            </Route>
-            <Route exact path="/SignUp">
-              <SignUpPage />
-            </Route>
-            <Route exact path="/">
-              {login ? <Redirect to="/Overview" /> : <Redirect to="/Login" />}
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+      <ToastProvider>
+        <Router>
+          <div className={darkTheme ? 'app dark' : 'app'}>
+            {navigation}
+            <Switch>
+              <Route exact path="/Overview">
+                <OverviewPage />
+              </Route>
+              <Route exact path="/Transactions">
+                <TransactionsPage />
+              </Route>
+              <Route exact path="/Cards">
+                <CardsPage />
+              </Route>
+              <Route exact path="/Goals">
+                <GoalsPage />
+              </Route>
+              <Route exact path="/Invoices">
+                <InvoicesPage />
+              </Route>
+              <Route exact path="/News">
+                <NewsPage />
+              </Route>
+              <Route exact path="/Settings">
+                <SettingsPage />
+              </Route>
+              <Route exact path="/Login">
+                <LoginPage />
+              </Route>
+              <Route exact path="/SignUp">
+                <SignUpPage />
+              </Route>
+              <Route exact path="/">
+                {login ? <Redirect to="/Overview" /> : <Redirect to="/Login" />}
+              </Route>
+            </Switch>
+          </div>
+        </Router>
+      </ToastProvider>
     </SwrProvider>
   );
 }
