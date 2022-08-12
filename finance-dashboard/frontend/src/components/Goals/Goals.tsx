@@ -3,6 +3,7 @@ import GoalsItem from 'src/components/GoalsItem/GoalsItem';
 import Loader from 'src/components/Loader/Loader';
 import { useAppSelector } from 'src/hooks/hooks';
 import { useGoals } from 'src/hooks/useGoals';
+import { GoalType } from 'src/types/types';
 
 import './Goals.css';
 
@@ -33,7 +34,7 @@ export default function Goals() {
             </Link>
           </div>
           <div className="goals--items">
-            {goals.map((item: any) => {
+            {goals.map((item: GoalType) => {
               return (
                 <GoalsItem
                   key={item._id}
