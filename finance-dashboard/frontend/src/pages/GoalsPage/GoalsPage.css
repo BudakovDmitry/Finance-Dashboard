@@ -182,14 +182,24 @@
 
 .button--delete {
   display: block;
-  width: 30px;
-  height: 15px;
+  width: 50px;
+  height: 25px;
   text-align: center;
   font-weight: bold;
   align-items: center;
   background-color: #ffffff;
-  color: red;
+  color: tomato;
   border: none;
+  margin-right: 10px;
+  border: 1px solid tomato;
+  border-radius: 30px;
+  font-size: 12px;
+}
+
+.button--delete:hover {
+  border: none;
+  color: #ffffff;
+  background-color: tomato;
 }
 
 .button--delete.dark {

@@ -53,17 +53,17 @@ const GoalsPageItem = ({
         ${amount}
       </p>
       <div className="goals--item--button">
-        <button
+        {/* <button
           onClick={() => removeGoal(id)}
           className={darkTheme ? 'button--done dark' : 'button--done'}
         >
           &#10003;
-        </button>
+        </button> */}
         <button
           onClick={() => removeGoal(id)}
           className={darkTheme ? 'button--delete dark' : 'button--delete'}
         >
-          &#10007;
+          Close
         </button>
       </div>
     </div>

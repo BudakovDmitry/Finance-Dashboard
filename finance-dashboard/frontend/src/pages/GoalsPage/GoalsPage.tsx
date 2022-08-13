@@ -4,19 +4,11 @@ import Header from 'src/components/Header/Header';
 import Loader from 'src/components/Loader/Loader';
 import { useGoalsPage } from 'src/pages/GoalsPage/useGoalsPage';
 import { goalSchema } from 'src/pages/GoalsPage/validationGoal';
-import { CreateGoalType } from 'src/types/types';
 
 import './GoalsPage.css';
 
-const initialValue: CreateGoalType = {
-  type: '',
-  title: '',
-  date: '',
-  amount: 0
-};
-
 export default function GoalsPage() {
-  const { addGoalHandle, darkTheme, goals, removeGoal } = useGoalsPage();
+  const { addGoalHandle, darkTheme, goals, removeGoal, value } = useGoalsPage();
 
   if (!goals) return <Loader />;
 
@@ -47,9 +39,12 @@ export default function GoalsPage() {
             Add Goals
           </h3>
           <Formik
-            initialValues={initialValue}
+            initialValues={value}
             validationSchema={goalSchema}
-            onSubmit={values => addGoalHandle(values)}
+            onSubmit={(values, actions) => {
+              addGoalHandle(values);
+              actions.resetForm();
+            }}
           >
             {({
               values,
