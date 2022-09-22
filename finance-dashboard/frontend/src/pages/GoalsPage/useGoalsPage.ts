@@ -12,7 +12,7 @@ export const useGoalsPage = () => {
 
   const addGoalHandle = async (values: any) => {
     try {
-      await addGoal(value);
+      await addGoal(values);
 
       mutate();
 
